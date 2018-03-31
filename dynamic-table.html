@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html >
+<head>
+   <title></title>
+   <style media="screen">
+     #tab{
+       height: auto;
+       width: auto;
+     }
+   </style>
+</head>
+<body>
+   <table  id="tab">
+
+   </table>
+</body>
+
+<script>
+   var number_of_cols = 4;
+    var  number_of_cells = 16;
+    var  number_of_rows = number_of_cells/number_of_cols;
+var count=1;
+   for (var i = 0; i < number_of_rows; i++) {
+     var row= document.createElement('tr');
+     document.getElementById('tab').innerHtml(row);
+     for (var j = 0; j <number_of_cols ; j++) {
+
+      var cell = document.createElement('td');
+      cell.innerText = count;
+      document.getElementById('tab').innerHtml(cell);
+      count++;
+   }}
+
+</script>
+</html>
